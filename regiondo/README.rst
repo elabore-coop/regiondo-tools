@@ -1,14 +1,14 @@
 =================
-project_assignees
+regiondo
 =================
 
-Add multiple assignees field to project task
+Interface to communicate with Regiondo using Regiondo API
 
 Installation
 ============
 
 Use Odoo normal procedure to install add-ons to install
-``project_assignees``.
+``regiondo``.
 
 Known issues / Roadmap
 ======================
@@ -17,7 +17,7 @@ Bug Tracker
 ===========
 
 Bugs are tracked on `our issues website
-<https://github.com/elabore-coop/project-tools/issues>`_. In case of
+<https://github.com/elabore-coop/regiondo-tools/issues>`_. In case of
 trouble, please check there if your issue has already been
 reported. If you spotted it first, help us smashing it by providing a
 detailed and welcomed feedback.
@@ -31,7 +31,7 @@ Images
 
 Contributors
 ------------
-* Stéphan Sainléger <https://github.com/stephansainleger>
+* Clément Thomas <https://github.com/clementelabore>
 
 Funders
 -------
