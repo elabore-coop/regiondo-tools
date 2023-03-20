@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_regiondo_import_wizard" model="ir.actions.server">
+        <field name="name">Import invoices from regiondo's bookings</field>
+        <field name="model_id" ref="model_res_company"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.setting_init_regiondo_import_wizard_action()
+        </field>
+    </record>
+
+    <record id="regiondo_import_wizard_view" model="ir.ui.view">
+        <field name="name">regiondo.import.wizard.view</field>
+        <field name="model">regiondo.import.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date_from" />
+                    <field name="date_to" />
+                </group>
+                <footer>
+                    <button string="Import" class="oe_highlight" type="object" name="import_invoices"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_account_actions"
+              name="Actions"
+              sequence="30"
+              parent="account.menu_finance"
+              />
+
+    <menuitem id="menu_action_regiondo_import_wizard"
+              action="action_regiondo_import_wizard"
+              groups="account.group_account_manager"
+              sequence="1"
+              parent="menu_account_actions" />
+</odoo>

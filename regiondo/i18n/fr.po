@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* regiondo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-18 15:43+0000\n"
+"PO-Revision-Date: 2023-03-18 15:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.res_config_settings_view_form_regiondo
+msgid "<span class=\"o_form_label\">Regiondo private key</span>"
+msgstr "<span class=\"o_form_label\">Clé privée Regiondo</span>"
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.res_config_settings_view_form_regiondo
+msgid "<span class=\"o_form_label\">Regiondo public key</span>"
+msgstr "<span class=\"o_form_label\">Clé publique Regiondo</span>"
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.res_config_settings_view_form_regiondo
+msgid "<span class=\"o_form_label\">Regiondo web customer</span>"
+msgstr "<span class=\"o_form_label\">Client Web Regiondo</span>"
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.regiondo_import_wizard_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de config"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__date_from
+msgid "From"
+msgstr "Depuis le"
+
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.regiondo_import_wizard_view
+msgid "Import"
+msgstr "Importer"
+
+#. module: regiondo
+#: code:addons/regiondo/models/regiondo.py:0
+#, python-format
+msgid "Import invoices from Regiondo"
+msgstr "Importer les factures depuis Regiondo"
+
+#. module: regiondo
+#: model:ir.actions.server,name:regiondo.action_regiondo_import_wizard
+#: model:ir.ui.menu,name:regiondo.menu_action_regiondo_import_wizard
+msgid "Import invoices from regiondo's bookings"
+msgstr "Importer les factures depuis les réservations Regiondo"
+
+#. module: regiondo
+#: code:addons/regiondo/wizard/regiondo_wizard.py:0
+#, python-format
+msgid "Import result"
+msgstr "Résultat de l'importation"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_account_payment_mode__regiondo_name
+#: model:ir.model.fields,field_description:regiondo.field_res_partner__regiondo_name
+#: model:ir.model.fields,field_description:regiondo.field_res_users__regiondo_name
+msgid "Name in regiondo"
+msgstr "Nom dans Regiondo"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_account_payment_mode
+msgid "Payment Modes"
+msgstr "Mode de paiement"
+
+#. module: regiondo
+#: model:ir.model,name:regiondo.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_res_config_settings__regiondo_web_customer_id
+msgid "Regiondo Web customer"
+msgstr "Client Web créé pour Regiondo"
+
+#. module: regiondo
+#: model_terms:ir.ui.view,arch_db:regiondo.res_config_settings_view_form_regiondo
+msgid "Regiondo configuration"
+msgstr "Configuration Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_account_bank_statement_line__regiondo_import_code
+#: model:ir.model.fields,field_description:regiondo.field_account_move__regiondo_import_code
+#: model:ir.model.fields,field_description:regiondo.field_account_payment__regiondo_import_code
+msgid "Regiondo import code"
+msgstr "Code de l'import Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_res_company__regiondo_private_key
+#: model:ir.model.fields,field_description:regiondo.field_res_config_settings__regiondo_private_key
+msgid "Regiondo private key"
+msgstr "Clé privée Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_product_product__regiondo_product_id
+#: model:ir.model.fields,field_description:regiondo.field_product_template__regiondo_product_id
+msgid "Regiondo product id"
+msgstr "Id du produit dans Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_res_company__regiondo_public_key
+#: model:ir.model.fields,field_description:regiondo.field_res_config_settings__regiondo_public_key
+msgid "Regiondo public key"
+msgstr "Clé publique Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_res_company__regiondo_web_customer_id
+msgid "Regiondo web customer"
+msgstr "Client Web créé pour Regiondo"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__date_to
+msgid "To"
+msgstr "Au"
+
+#. module: regiondo
+#: model:ir.model.fields,help:regiondo.field_res_company__regiondo_web_customer_id
+#: model:ir.model.fields,help:regiondo.field_res_config_settings__regiondo_web_customer_id
+msgid ""
+"When import invoices from Regiondo, if no resseler and POS sale channel, "
+"select this customer"
+msgstr ""
+"Lors de l'import de factures depuis Regiondo, s'il n'y a pas de revendeur, mais qu'on est dans le canal de vente POS, "
+"ce client sera selectionné"
