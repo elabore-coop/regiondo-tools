@@ -80,8 +80,12 @@ This module is maintained by Elabore.
     "data": [
         "data/regiondo_data.xml",
         "security/ir.model.access.csv",
-        "views/regiondo_views.xml",
+        "views/account_payment_mode_views.xml",
+        "views/product_views.xml",
+        "views/res_config_settings_views.xml",
+        "views/res_partner_views.xml",
         "wizard/regiondo_wizard_views.xml",
+        "views/regiondo_menu_views.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_payment_mode_form_regiondo" model="ir.ui.view">
+        <field name="name">account.payment.mode.form.inherit.regiondo</field>
+        <field name="model">account.payment.mode</field>
+        <field name="priority">5</field>
+        <field name="inherit_id" ref="account_payment_mode.account_payment_mode_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='variable_journal_ids']" position="after">
+                <field name="regiondo_name" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

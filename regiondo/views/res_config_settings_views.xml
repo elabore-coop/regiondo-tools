@@ -1,42 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <record id="account_payment_mode_form_regiondo" model="ir.ui.view">
-        <field name="name">account.payment.mode.form.inherit.regiondo</field>
-        <field name="model">account.payment.mode</field>
-        <field name="priority">5</field>
-        <field name="inherit_id" ref="account_payment_mode.account_payment_mode_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='variable_journal_ids']" position="after">
-                <field name="regiondo_name" />
-            </xpath>
-        </field>
-    </record>
-
-    <record id="product_template_form_regiondo" model="ir.ui.view">
-        <field name="name">product.template.form.inherit.regiondo</field>
-        <field name="model">product.template</field>
-        <field name="priority">5</field>
-        <field name="inherit_id" ref="product.product_template_form_view"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='type']" position="after">
-                <field name="regiondo_product_id" />
-            </xpath>
-        </field>
-    </record>
-
-    <record id="view_partner_form_regiondo" model="ir.ui.view">
-        <field name="name">res.partner.inherit.regiondo</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
-        <field name="arch" type="xml">
-            <field name="vat" position="after">
-                <field name="regiondo_name" />
-            </field>
-        </field>
-    </record>
-
-
     <!-- Add regiondo fields in Configuration view -->
     <record id="res_config_settings_view_form_regiondo" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.inherit.regiondo</field>
@@ -70,9 +33,4 @@
             </xpath>
         </field>
     </record>
-
-
-
-
-
 </odoo>

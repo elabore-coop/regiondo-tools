@@ -24,7 +24,6 @@ class AccountMove(models.Model):
 
     regiondo_import_code = fields.Char('Regiondo import code')
 
-
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
@@ -49,7 +48,7 @@ class Company(models.Model):
 
     @api.model
     def setting_init_regiondo_import_wizard_action(self):
-        """ Called by the 'Import' button in Invoice/Customers"""
+        """ Called by the 'Import' button in Invoice/Actions"""
         view_id = self.env.ref('regiondo.regiondo_import_wizard_view').id
         return {'type': 'ir.actions.act_window',
                 'name': _('Import invoices from Regiondo'),

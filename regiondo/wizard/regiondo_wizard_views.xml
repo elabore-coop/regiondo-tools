@@ -25,16 +25,4 @@
             </form>
         </field>
     </record>
-
-    <menuitem id="menu_account_actions"
-              name="Actions"
-              sequence="30"
-              parent="account.menu_finance"
-              />
-
-    <menuitem id="menu_action_regiondo_import_wizard"
-              action="action_regiondo_import_wizard"
-              groups="account.group_account_manager"
-              sequence="1"
-              parent="menu_account_actions" />
 </odoo>
