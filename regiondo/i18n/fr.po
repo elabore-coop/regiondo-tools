@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-18 15:43+0000\n"
-"PO-Revision-Date: 2023-03-18 15:43+0000\n"
+"POT-Creation-Date: 2023-03-21 09:17+0000\n"
+"PO-Revision-Date: 2023-03-21 09:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -30,6 +30,7 @@ msgstr "<span class=\"o_form_label\">Clé publique Regiondo</span>"
 msgid "<span class=\"o_form_label\">Regiondo web customer</span>"
 msgstr "<span class=\"o_form_label\">Client Web Regiondo</span>"
 
+
 #. module: regiondo
 #: model_terms:ir.ui.view,arch_db:regiondo.regiondo_import_wizard_view
 msgid "Cancel"
@@ -45,17 +46,22 @@ msgstr "Sociétés"
 msgid "Config Settings"
 msgstr "Paramètres de config"
 
-#. module: regiondo
-#: model:ir.model,name:regiondo.model_res_partner
-msgid "Contact"
-msgstr "Contact"
 
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_account_move__display_name
+#: model:ir.model.fields,field_description:regiondo.field_account_payment_mode__display_name
+#: model:ir.model.fields,field_description:regiondo.field_product_template__display_name
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__display_name
+#: model:ir.model.fields,field_description:regiondo.field_res_company__display_name
+#: model:ir.model.fields,field_description:regiondo.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:regiondo.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
 
 #. module: regiondo
 #: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__date_from
 msgid "From"
 msgstr "Depuis le"
-
 
 #. module: regiondo
 #: model_terms:ir.ui.view,arch_db:regiondo.regiondo_import_wizard_view
@@ -85,6 +91,26 @@ msgstr "Résultat de l'importation"
 msgid "Journal Entry"
 msgstr "Pièce comptable"
 
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_account_move____last_update
+#: model:ir.model.fields,field_description:regiondo.field_account_payment_mode____last_update
+#: model:ir.model.fields,field_description:regiondo.field_product_template____last_update
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard____last_update
+#: model:ir.model.fields,field_description:regiondo.field_res_company____last_update
+#: model:ir.model.fields,field_description:regiondo.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:regiondo.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: regiondo
+#: model:ir.model.fields,field_description:regiondo.field_regiondo_import_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
 
 #. module: regiondo
 #: model:ir.model.fields,field_description:regiondo.field_account_payment_mode__regiondo_name
@@ -94,9 +120,39 @@ msgid "Name in regiondo"
 msgstr "Nom dans Regiondo"
 
 #. module: regiondo
+#: code:addons/regiondo/wizard/regiondo_wizard.py:0
+#, python-format
+msgid ""
+"Partner \"%s\" not found. Please check a customer is set with this "
+"\"Nom Regiondo\""
+msgstr ""
+"Client \"%s\" introuvable. Merci de vérifier qu'il existe un client avec ce "
+"\"Regiondo name\""
+
+#. module: regiondo
 #: model:ir.model,name:regiondo.model_account_payment_mode
 msgid "Payment Modes"
 msgstr "Mode de paiement"
+
+#. module: regiondo
+#: code:addons/regiondo/wizard/regiondo_wizard.py:0
+#, python-format
+msgid ""
+"Payment mode \"%s\" not found. Please check a payment mode is set with this "
+"\"Regiondo name\""
+msgstr ""
+"Mode de paiement \"%s\" introuvable. Merci de vérifier qu'il existe un mode de paiement avec ce "
+"\"Nom Regiondo\""
+
+#. module: regiondo
+#: code:addons/regiondo/wizard/regiondo_wizard.py:0
+#, python-format
+msgid ""
+"Product \"%s\" with id \"%s\" is not found. Please check \"%s\" product is "
+"created and \"regiondo product id\" is set to \"%s\" for this product."
+msgstr ""
+"Produit \"%s\" avec id \"%s\" introuvable. Merci de vérifier que le produit \"%s\" est "
+"créé et que le \"product id regiondo\" indiqué est \"%s\" pour ce produit."
 
 #. module: regiondo
 #: model:ir.model,name:regiondo.model_product_template
@@ -149,11 +205,22 @@ msgid "To"
 msgstr "Au"
 
 #. module: regiondo
+#: code:addons/regiondo/wizard/regiondo_wizard.py:0
+#, python-format
+msgid ""
+"Too many bookings for this date range. Please change dates to reduce booking"
+" number.Max bookings by query : 250"
+msgstr ""
+"Trop de réservations pour ces dates. Merci de modifier les dates pour réduire le nombre"
+" de réservations. Maximum de réservations par requête : 250"
+
+#. module: regiondo
 #: model:ir.model.fields,help:regiondo.field_res_company__regiondo_web_customer_id
 #: model:ir.model.fields,help:regiondo.field_res_config_settings__regiondo_web_customer_id
 msgid ""
 "When import invoices from Regiondo, if no resseler and POS sale channel, "
 "select this customer"
 msgstr ""
-"Lors de l'import de factures depuis Regiondo, s'il n'y a pas de revendeur, mais qu'on est dans le canal de vente POS, "
-"ce client sera selectionné"
+"Lors de l'import de factures depuis Regiondo, s'il n'y a pas de revendeur, "
+"mais qu'on est dans le canal de vente POS, ce client sera selectionné"
+

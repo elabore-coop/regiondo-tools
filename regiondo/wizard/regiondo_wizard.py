@@ -48,7 +48,7 @@ class RegiondoImportWizard(models.TransientModel):
         if not key_partner:
             if partner_name not in partner_id_by_regiondo_name:
                 raise ValidationError(
-                    'Partner %s not found. Please check a customer is set with this "Regiondo name"'
+                    _('Partner "%s" not found. Please check a customer is set with this "Regiondo name"')
                     % (partner_name,))
 
             key_partner = partner_id_by_regiondo_name[partner_name]
@@ -62,7 +62,7 @@ class RegiondoImportWizard(models.TransientModel):
         payment_mode_label = re.findall(r'\(([^]]*)\)', booking['payment_status']['label'])[0]
         if payment_mode_label not in payment_mode_id_by_regiondo_name:
             raise ValidationError(
-                _('Payment mode %s is not found. Please check a payment mode is set with this "Regiondo name"')
+                _('Payment mode "%s" not found. Please check a payment mode is set with this "Regiondo name"')
                 % (payment_mode_label,))
         return payment_mode_id_by_regiondo_name[payment_mode_label]
 
