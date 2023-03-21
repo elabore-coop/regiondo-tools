@@ -1,29 +1,6 @@
 from odoo import models, fields, api, _
 
 
-class AccountPaymentMode(models.Model):
-    _inherit = 'account.payment.mode'
-
-    regiondo_name = fields.Char('Name in regiondo')
-
-
-class ProductTemplate(models.Model):
-    _inherit = 'product.template'
-
-    regiondo_product_id = fields.Integer('Regiondo product id')
-
-
-class ResPartner(models.Model):
-    _inherit = 'res.partner'
-
-    regiondo_name = fields.Char('Name in regiondo')
-
-
-class AccountMove(models.Model):
-    _inherit = 'account.move'
-
-    regiondo_import_code = fields.Char('Regiondo import code')
-
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
