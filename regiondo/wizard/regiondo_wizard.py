@@ -59,6 +59,8 @@ class RegiondoImportWizard(models.TransientModel):
         Find Odoo payment mode id from a regiondo booking
         '''
         # find payment_mode_key : booking['payment_status']['label']
+        if booking['payment_status']['code'] == 'paid_offline':
+            return None
         payment_mode_label = re.findall(r'\(([^]]*)\)', booking['payment_status']['label'])[0]
         if payment_mode_label not in payment_mode_id_by_regiondo_name:
             raise ValidationError(
@@ -257,7 +259,7 @@ class RegiondoImportWizard(models.TransientModel):
         date_to = self.date_to
         request_parameters = {
             'limit': 1000,
-            'date_range_by': 'date_bought',
+            'date_range_by': 'date_of_event',
             'date_range': '%s,%s' % (date_from, date_to),
         }
 
