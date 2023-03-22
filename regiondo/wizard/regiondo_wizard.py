@@ -208,8 +208,8 @@ class RegiondoImportWizard(models.TransientModel):
 
         # Create invoices with an invoice line by booking
         invoices_data = []
-        for customer_id in bookings_by_key:
-            for payment_mode_id in bookings_by_key[customer_id]:
+        for customer_id, bookings_by_payment_mode in bookings_by_key.items():
+            for payment_mode_id in bookings_by_payment_mode:
                 invoice_lines_data = []
 
                 for booking in bookings_by_key[customer_id][payment_mode_id]:
