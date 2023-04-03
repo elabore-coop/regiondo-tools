@@ -267,11 +267,22 @@ class RegiondoImportWizard(models.TransientModel):
         c = RegiondoConnector(public_key, private_key, accept_language)
         result = c.call(request_method, request_path, request_parameters)
 
+        #check date
+        if date_to < date_from:
+            raise UserError(_('"date from" value is after "date to" value. '
+                              'Please check dates.'))
+
         # check result limit
         if int(result['page']['total_items']) >= 250:
             raise UserError(_('Too many bookings for this date range. '
                               'Please change dates to reduce booking number.'
                               'Max bookings by query : 250'))
+        
+        # remove canceled bookings
+        for idx, booking in enumerate(result['data']):
+            if booking['status'] == 'canceled':
+                result['data'].pop(idx)
+
 
         # get invoices data
         invoices_data = self._get_invoices_data(result, import_sequence)
