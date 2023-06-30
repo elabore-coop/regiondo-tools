@@ -107,6 +107,19 @@ class RegiondoImportWizard(models.TransientModel):
         # Name of final customer
         invoice_line_name += booking['first_name'] + ' ' + booking['last_name']
 
+        # find external number if exists
+        external_order_nomber_field_id = '21095'
+        external_order_number = ''
+        if 'buyer_data' in booking:
+            for buyer_data in booking['buyer_data']:
+                if buyer_data.get('field_id') == external_order_nomber_field_id:
+                    external_order_number = buyer_data.get('value')
+                    break
+        
+        if external_order_number:
+            invoice_line_name += ' ['+external_order_number+']'
+
+
         # Find Prices and Quantity
         price_unit = 0
         qty = 0
